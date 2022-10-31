@@ -1,0 +1,28 @@
+/* body {
+    background-color: red;
+} */
+
+.padding {
+    padding: 5px 25px;
+}
+
+.container-x {
+    width: 80% !important;
+    margin: 0 auto;
+}
+
+.d-mt-m {
+    margin-top: 2.4rem;
+}
+
+.mt-m {
+    margin-top: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center{
+    text-align: center;
+}

@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class=" grey lighten-5">
+    <div class="navbar-fixed">
+        <nav class="nav-extended blue darken-4 padding-y">
+            <div class="container-x">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">AT&T</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="#"><strong>Logout</strong></a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent">
+                        <li class="tab"><a class="active" href="#dashboard">Dashboard</a></li>
+                        <li class="tab"><a href="#users">Clients</a></li>
+                        <li class="tab"><a href="#did-number">DID Numbers</a></li>
+                        <li class="tab"><a href="#orders">Orders</a></li>
+                        <li class="tab"><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#"><strong>Logout</strong></a></li>
+    </ul>
+
+    <div class="container-x">
+        <div class="body-content">
+            <div class="d-mt-m">
+                <div id="dashboard" class="col s12">
+                    <br>
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <h5><strong>DID Status</strong></h5>
+                            <div class="card">
+                                <div id="did-piechart"></div>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                            <h5><strong>Users Status</strong></h5>
+                            <div class="card">
+                                <div id="users-piechart"></div>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m4">
+                            <h5><strong>Plan</strong></h5>
+                            <div class="card">
+                                <div id="plans-piechart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Action Items</h4>
+                    <p>The below plans will be expire soon. Please upgrade ASAP.</p>
+                    <div class="card padding">
+                        <br>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <table class="highlight responsive-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>DID Number</th>
+                                            <th>Assignee Email</th>
+                                            <th>Plan</th>
+                                            <th>Number Status</th>
+                                            <th>Employee Status</th>
+                                            <th>Plan Expire</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>616-123-4567</td>
+                                            <td>sidhartha.jangam@connxai.com</td>
+                                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                                            <td>Active</td>
+                                            <td>Active</td>
+                                            <td>Today</td>
+                                            <td>
+                                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit"
+                                                    name="action"><i class="material-icons">edit</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit"
+                                                    name="action"><i class="material-icons">visibility</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit"
+                                                    name="action"><i class="material-icons">delete</i>
+                                                </sapn>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>616-123-4567</td>
+                                            <td>sidhartha.jangam@connxai.com</td>
+                                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                                            <td>Active</td>
+                                            <td>Active</td>
+                                            <td>Today</td>
+                                            <td>
+                                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit"
+                                                    name="action"><i class="material-icons">edit</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit"
+                                                    name="action"><i class="material-icons">visibility</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit"
+                                                    name="action"><i class="material-icons">delete</i>
+                                                </sapn>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>616-123-4567</td>
+                                            <td>sidhartha.jangam@connxai.com</td>
+                                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                                            <td>Active</td>
+                                            <td>Active</td>
+                                            <td>Today</td>
+                                            <td>
+                                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit"
+                                                    name="action"><i class="material-icons">edit</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit"
+                                                    name="action"><i class="material-icons">visibility</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit"
+                                                    name="action"><i class="material-icons">delete</i>
+                                                </sapn>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>616-123-4567</td>
+                                            <td>sidhartha.jangam@connxai.com</td>
+                                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                                            <td>Active</td>
+                                            <td>Active</td>
+                                            <td>Today</td>
+                                            <td>
+                                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit"
+                                                    name="action"><i class="material-icons">edit</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit"
+                                                    name="action"><i class="material-icons">visibility</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit"
+                                                    name="action"><i class="material-icons">delete</i>
+                                                </sapn>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>616-123-4567</td>
+                                            <td>sidhartha.jangam@connxai.com</td>
+                                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                                            <td>Active</td>
+                                            <td>Active</td>
+                                            <td>Today</td>
+                                            <td>
+                                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit"
+                                                    name="action"><i class="material-icons">edit</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit"
+                                                    name="action"><i class="material-icons">visibility</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit"
+                                                    name="action"><i class="material-icons">delete</i>
+                                                </sapn>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>616-123-4567</td>
+                                            <td>sidhartha.jangam@connxai.com</td>
+                                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                                            <td>Active</td>
+                                            <td>Active</td>
+                                            <td>This Week</td>
+                                            <td>
+                                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit"
+                                                    name="action"><i class="material-icons">edit</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit"
+                                                    name="action"><i class="material-icons">visibility</i>
+                                                </sapn>
+                                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit"
+                                                    name="action"><i class="material-icons">delete</i>
+                                                </sapn>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col s12 m4">
+                                <div id="did-piechart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-m">
+                <div id="orders" class="col s12">
+                    <h4>Order Details</h4>
+                    <table class="highlight responsive-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Orderd by</th>
+                                <th>Email</th>
+                                <th>Orderd Number</th>
+                                <th>Orderd Date</th>
+                                <th>Qty</th>
+                                <th>Cost</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Client One</td>
+                                <td>sidhartha.jangam@connxai.com</td>
+                                <td>1234567890</td>
+                                <td>17-Oct-2022</td>
+                                <td>100</td>
+                                <td>$1200</td>
+                                <td>
+                                    <a class="waves-effect waves-light blue darken-4 btn">Order Details<i
+                                            class="material-icons left">receipt</i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="users" class="col s12">
+                <h4>User Details</h4>
+                <table class="highlight responsive-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>DID Number</th>
+                            <th>Access</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td>1234567890</td>
+                            <td><button class="red accent-3 btn">Admin</button></td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>
+                                <sapn class="red accent-3 btn">Admin</sapn>
+                            </td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Client One</td>
+                            <td>jangam.sidhartha@connxai.com</td>
+                            <td>1234567890</td>
+                            <td>Employee</td>
+                            <td>Active</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="did-number" class="col s12">
+                <h4>DID Numbers</h4>
+                <table class="highlight responsive-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>DID Number</th>
+                            <th>Assignee Email</th>
+                            <th>Plan</th>
+                            <th>Number Status</th>
+                            <th>Employee Status</th>
+                            <th>Plan Expire</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td><span class="amber-text"> <strong>Premium</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td> <span class="blue-text text-darken-2"> <strong>Standard</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td> <span class="blue-text text-darken-2"> <strong>Standard</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td> <span class="blue-text text-darken-2"> <strong>Standard</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td> <span class="blue-text text-darken-2"> <strong>Standard</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>616-123-4567</td>
+                            <td>sidhartha.jangam@connxai.com</td>
+                            <td> <span class="blue-text text-darken-2"> <strong>Standard</strong></span></td>
+                            <td>Active</td>
+                            <td>Active</td>
+                            <td>31-Oct-2022</td>
+                            <td>
+                                <sapn class="btn waves-effect waves-light orange darken-1" type="submit" name="action">
+                                    <i class="material-icons">edit</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light blue darken-4" type="submit" name="action"><i
+                                        class="material-icons">visibility</i>
+                                </sapn>
+                                <sapn class="btn waves-effect waves-light red  accent-3" type="submit" name="action"><i
+                                        class="material-icons">delete</i>
+                                </sapn>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="services" class="col s12">
+                <div class="row text-center">
+                    <div class="col s12">
+                        <img class="materialboxed" width="100%" src="css/img/d-service.png">
+                        <p><strong>Teams Call Analytics</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Floating Button -->
+    <div class="fixed-action-btn body-content">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">add</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating btn green modal-trigger tooltipped" data-position="left"
+                    data-tooltip="Buy New DID Number" href="#buy-new-did"><i class="material-icons">sim_card</i></a>
+            </li>
+            <li><a class="btn-floating btn blue modal-trigger tooltipped" data-position="left"
+                    data-tooltip="Create new user" href="#add-user"><i class="material-icons">person_add</i></a></li>
+        </ul>
+    </div>
+
+
+    <!-- Add User Modal Structure -->
+    <div id="add-user" class="modal">
+        <div class="modal-content">
+            <h5><strong>Create New User</strong></h5>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="input-field">
+                            <input id="first_name" type="text" class="validate" data-length="15" autocomplete="off">
+                            <label for="first_name">First Name</label>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="input-field">
+                            <input id="last_name" type="text" class="validate" data-length="15" autocomplete="off">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="input-field">
+                                <input id="email" type="email" class="validate" data-length="50" autocomplete="off">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+
+                        <div class="col s12 m6">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose Role</option>
+                                    <option value="super_admin">Super Admin</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="employee">Employee</option>
+                                </select>
+                                <label>Select user role</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <button class="btn waves-effect waves-light blue darken-4" type="submit" name="submit">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Buy DID Number Modal Structure -->
+    <div id="buy-new-did" class="modal">
+        <div class="modal-content">
+            <form action="" method="post">
+                <h6><strong>Buy New DID Numbers</strong></h6>
+                <br>
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>DID Type</option>
+                                <option value="DID">DID</option>
+                                <option value="TOLL">TOLL</option>
+                            </select>
+                            <label>Select DID Type</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Number Format</option>
+                                <option value="601">601</option>
+                                <option value="699">699</option>
+                            </select>
+                            <label>Select Number Format</label>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="input-field">
+                            <input id="did-count" type="number" class="validate" autocomplete="off">
+                            <label for="did-count">How many numbers you want?</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h6><strong>Select Plan Details</strong></h6>
+                <p>How many numbers you want to apply these below plans?</p>
+
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="input-field">
+                            <input id="standard-plan-count" type="number" class="validate" autocomplete="off">
+                            <label for="standard-plan-count">Standard Plan?</label>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="input-field">
+                            <input id="hybrid-plan-count" type="number" class="validate" autocomplete="off">
+                            <label for="hybrid-plan-count">Hybrid Plan?</label>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="input-field">
+                            <input id="enhanced-plan-count" type="number" class="validate" autocomplete="off">
+                            <label for="enhanced-plan-count">Enhanced Plan?</label>
+                        </div>
+                    </div>
+                    <p>For more infomation about the plans please see the
+                        below details.</p>
+                </div>
+
+                <div class="input-field">
+                    <button class="btn waves-effect waves-light blue darken-4" type="submit" name="submit">Buy DID
+                        Numbers
+                        <!-- <i class="material-icons right">send</i> -->
+                    </button>
+                </div>
+
+                <br>
+
+                <h6><strong>Plan Details</strong></h6>
+                <br>
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">domain</i>Standard Plan
+                        </div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vero aperiam itaque qui odit dolores at quis enim nisi voluptates. Quam commodi
+                                libero obcaecati similique consectetur corrupti, odit expedita ipsa optio?</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">card_travel</i>Hybrid Plan</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vero aperiam itaque qui odit dolores at quis enim nisi voluptates. Quam commodi
+                                libero obcaecati similique consectetur corrupti, odit expedita ipsa optio?</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">card_membership</i>Enhanced Plan</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vero aperiam itaque qui odit dolores at quis enim nisi voluptates. Quam commodi
+                                libero obcaecati similique consectetur corrupti, odit expedita ipsa optio?</span>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/init.js"></script>
+</body>
+
+</html>
